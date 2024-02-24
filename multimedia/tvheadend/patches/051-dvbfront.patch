@@ -1,0 +1,11 @@
+--- a/src/input/mpegts/linuxdvb/linuxdvb_frontend.c	2023-01-26 16:24:01.000000000 -0800
++++ b/src/input/mpegts/linuxdvb/linuxdvb_frontend.c	2023-08-17 01:04:46.273803504 -0700
+@@ -593,7 +593,7 @@
+ linuxdvb_frontend_get_grace ( mpegts_input_t *mi, mpegts_mux_t *mm )
+ {
+   linuxdvb_frontend_t *lfe = (linuxdvb_frontend_t*)mi;
+-  int r = 5;
++  int r = 16;
+   if (lfe->lfe_satconf)
+     r = linuxdvb_satconf_get_grace(lfe->lfe_satconf, mm);
+   return r;
